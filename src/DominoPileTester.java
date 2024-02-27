@@ -36,13 +36,13 @@ public class DominoPileTester {
         setUp();
         int top = 0;
         int bottom = 0;
-        dominoPile.newStack6();
-        System.out.println(dominoPile.getPile());
-        for (int i = 0; i < dominoPile.getPile().size(); i++) {
-            assertTrue("Ensure that your newStack6 method in the DominoPile class has been implemented correctly!", dominoPile.getPile().get(i).getTop() == top);
-            assertTrue("Ensure that your newStack6 method in the DominoPile class has been implemented correctly!", dominoPile.getPile().get(i).getBottom() == bottom);
-            System.out.println("Expected Top: " + top + " Observed Top: " + dominoPile.getPile().get(i).getTop());
-            System.out.println("Expected Bottom: " + bottom + " Observed bottom: " + dominoPile.getPile().get(i).getBottom());
+        this.dominoPile.newStack6();
+        System.out.println(this.dominoPile.getPile());
+        for (int i = 0; i < this.dominoPile.getPile().size(); i++) {
+            assertTrue("Ensure that your newStack6 method in the DominoPile class has been implemented correctly!", this.dominoPile.getPile().get(i).getTop() == top);
+            assertTrue("Ensure that your newStack6 method in the DominoPile class has been implemented correctly!", this.dominoPile.getPile().get(i).getBottom() == bottom);
+            System.out.println("Expected Top: " + top + " Observed Top: " + this.dominoPile.getPile().get(i).getTop());
+            System.out.println("Expected Bottom: " + bottom + " Observed bottom: " + this.dominoPile.getPile().get(i).getBottom());
             if (bottom == 6) {
                 top++;
                 bottom = top;
@@ -77,8 +77,8 @@ public class DominoPileTester {
         int top = 0;
         int bottom = 0;
         boolean allInSameOrder = true;
-        for (int i = 0; i < dominoPile.getPile().size(); i++) {
-            if (!(dominoPile.getPile().get(i).getTop() == top && dominoPile.getPile().get(i).getBottom() == bottom)) allInSameOrder = false;
+        for (int i = 0; i < this.dominoPile.getPile().size(); i++) {
+            if (!(this.dominoPile.getPile().get(i).getTop() == top && this.dominoPile.getPile().get(i).getBottom() == bottom)) allInSameOrder = false;
 
             if (bottom == 6) {
                 top++;
